@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prevYear" class="menu-btn"><< Year</button>
+            <span id="year"></span>
+            <button id="nextYear" class="menu-btn">Year >></button>
+            <button id="prevMonth" class="menu-btn"><< Month</button>
+            <span id="month"></span>
+            <button id="nextMonth" class="menu-btn">Month >></button>
+        </div>
+        
+        <div class="calendar-header-days">
+            <div class="calendar-header-day">Sun</div>
+            <div class="calendar-header-day">Mon</div>
+            <div class="calendar-header-day">Tue</div>
+            <div class="calendar-header-day">Wed</div>
+            <div class="calendar-header-day">Thu</div>
+            <div class="calendar-header-day">Fri</div>
+            <div class="calendar-header-day">Sat</div>
+        </div>
+        
+        <div id="calendar" class="calendar">
+            <!-- Calendar days will be populated here -->
+        </div>
+        <div class="calendar-controls">
+            <button id="fetchEventsBtn" class="menu-btn">Fetch Events</button>
+        </div>
+    </div>
+
+    <!-- Event Details Panel -->
+    <div id="eventDetailsPanel" class="event-details-panel">
+        <span id="closeDetails" class="close">&times;</span>
+        <h3 id="eventDay">Events for <span id="selectedDate"></span></h3>
+        <div id="eventDetails">
+            <!-- Event details will be populated here -->
+        </div>
+        <button id="deleteEventsBtn" class="menu-btn">Delete Selected Events</button>
+        <button id="addEventBtn" class="menu-btn">Add Event</button>
+    </div>
+
+    <!-- Event Details and Add Event Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Event</h2>
+            <form id="eventForm">
+                <input type="text" id="title" placeholder="Event Title" required>
+                <textarea id="description" placeholder="Event Description"></textarea>
+                <input type="date" id="startDate" required>
+                <input type="date" id="endDate" required>
+                <input type="time" id="time" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
