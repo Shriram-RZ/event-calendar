@@ -45,14 +45,21 @@ body {
 .calendar-header-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    gap: 0px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 .calendar-header-day {
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 19px;
+
+
 }
 
 .calendar {
