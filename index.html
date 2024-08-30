@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Column 1: Fetch Events and Upcoming Events -->
+        <div class="column column-1">
+            <button id="fetchEvents">Fetch Events</button>
+            <div id="upcomingEvents"></div>
+        </div>
+
+        <!-- Column 2: Year and Month Navigation -->
+        <div class="column column-2">
+            <div class="header">
+                <button id="prevYear">Previous Year</button>
+                <button id="nextYear">Next Year</button>
+                <h2 id="yearDisplay"></h2>
+                <button id="prevMonth">Previous Month</button>
+                <button id="nextMonth">Next Month</button>
+                <h2 id="monthDisplay"></h2>
+            </div>
+        </div>
+
+        <!-- Column 3: Calendar Days -->
+        <div class="column column-3">
+            <div id="calendarDates" class="calendar-dates"></div>
+        </div>
+
+        <!-- Column 4: Current Date and Event Details -->
+        <div class="column column-4">
+            <div id="currentDateDetails">
+                <h3 id="currentDate"></h3>
+                <div id="eventDetails"></div>
+                <button id="addEventButton">Add Event</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Adding Events -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <form id="eventForm">
+                <label for="eventTitle">Title:</label>
+                <input type="text" id="eventTitle" required>
+                <label for="eventDate">Date:</label>
+                <input type="date" id="eventDate" required>
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime">
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime">
+                <label for="eventDescription">Description:</label>
+                <textarea id="eventDescription"></textarea>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
